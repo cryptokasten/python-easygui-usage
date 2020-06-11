@@ -1,0 +1,85 @@
+#+TITLE: Python EasyGUI usage
+#+OPTIONS: ^:nil
+#+PROPERTY: header-args:sh :session *shell python-easygui-usage sh* :results silent raw
+#+PROPERTY: header-args:python :session *shell python-easygui-usage python* :results silent raw
+
+** System environment
+
+- Debian 9.11
+
+- Python 3.7.0
+
+Python modules:
+
+- EasyGUI 0.98.0
+
+** Install easygui
+
+#+BEGIN_SRC sh
+pip install easygui
+#+END_SRC
+
+** Demo
+
+#+BEGIN_SRC python
+from easygui import *
+egdemo()
+#+END_SRC
+
+** Import
+
+#+BEGIN_SRC python
+from easygui import *
+#+END_SRC
+
+** Message box
+
+#+BEGIN_SRC python
+msgbox("Helllo, World!", "Title")
+#+END_SRC
+
+#+BEGIN_SRC python
+msgbox("Backup complete!", ok_button="Good job!")
+#+END_SRC
+** Boolean box
+
+#+BEGIN_SRC python
+ccbox("Continue?", "Question")
+#+END_SRC
+
+#+BEGIN_SRC python
+ynbox("Continue?", "Question")
+#+END_SRC
+
+** Choice box
+
+#+BEGIN_SRC python
+choices = ["Yes","No","Only on Friday"]
+choicebox("Do you like to eat fish?", choices=choices)
+#+END_SRC
+
+** Button box
+
+#+BEGIN_SRC python
+buttonbox()
+#+END_SRC
+
+** Index box
+
+#+BEGIN_SRC python
+indexbox()
+#+END_SRC
+
+** Bool box
+
+#+BEGIN_SRC python
+boolbox("Content", "Title", ["Option True", "Option False"])
+#+END_SRC
+
+** References
+
+- http://easygui.sourceforge.net/
+
+- https://pypi.org/project/easygui/
+
+- https://easygui.readthedocs.io/en/latest/
